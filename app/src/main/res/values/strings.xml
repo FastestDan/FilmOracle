@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Film Oracle</string>
+    <string name="title_activity_main_screen">Название фильма</string>
+    <string name="title_home">Главная</string>
+    <string name="title_selection">Подборки</string>
+    <string name="title_favourites">Избранное</string>
+</resources>
