@@ -4,4 +4,6 @@
     <string name="title_home">Главная</string>
     <string name="title_selection">Подборки</string>
     <string name="title_favourites">Избранное</string>
+    <string name="label_blank">Название фильма</string>
+    <string name="year_blank">1990</string>
 </resources>
