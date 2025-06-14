@@ -6,17 +6,420 @@
     android:layout_height="match_parent"
     tools:context=".ui.selection.SelectionFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0sp"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/new_button"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textIsSelectable="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/popular_button"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button2"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button3"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button4"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button5"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button6"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button7"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button8"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button9"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button10"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genre_button11"
+                android:layout_width="372sp"
+                android:layout_height="76sp"
+                android:layout_marginLeft="20sp"
+                android:text="Button"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button1"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button2"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button3"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button4"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button5"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button6"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button7"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button8"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button9"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button10"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button11"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/year_button12"
+                        android:layout_width="372sp"
+                        android:layout_height="76sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="Button"
+                        android:textAllCaps="false"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/year_button_custom"
+                    android:layout_width="372sp"
+                    android:layout_height="76sp"
+                    android:layout_marginLeft="20sp"
+                    android:text="Button"
+                    android:textAllCaps="false"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
