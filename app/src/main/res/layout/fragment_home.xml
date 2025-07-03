@@ -17,6 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -33,44 +34,59 @@
             </androidx.recyclerview.widget.RecyclerView>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="301.5sp"
+                android:layout_height="48sp"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/prev_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Пред." />
+                    android:layout_marginEnd="2sp"
+                    android:text="Пред."
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    app:cornerRadius="20sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/uno_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40sp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="1" />
+                    android:layout_marginStart="2sp"
+                    android:layout_marginEnd="2sp"
+                    android:gravity="center_vertical"
+                    android:text="1"
+                    android:textStyle="normal"
+                    app:cornerRadius="48sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dos_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40sp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="2" />
+                    android:layout_marginStart="2sp"
+                    android:layout_marginEnd="2sp"
+                    android:text="2"
+                    app:cornerRadius="48sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/tres_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40sp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="3" />
+                    android:layout_marginStart="2sp"
+                    android:layout_marginEnd="2sp"
+                    android:text="3"
+                    app:cornerRadius="48sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/next_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="След." />
+                    android:layout_marginStart="2sp"
+                    android:text="След."
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    app:cornerRadius="20sp" />
 
             </LinearLayout>
         </LinearLayout>

@@ -35,10 +35,10 @@ class MainScreen : AppCompatActivity() {
 
         val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
-        adapter = MovieAdapter()
-        var movieCards = findViewById<RecyclerView>(R.id.movie_cards)
-        movieCards.layoutManager = GridLayoutManager(this, 2)
-        movieCards.adapter = adapter
+//        adapter = MovieAdapter()
+//        var movieCards = findViewById<RecyclerView>(R.id.movie_cards)
+//        movieCards.layoutManager = GridLayoutManager(this, 2)
+//        movieCards.adapter = adapter
 
         val navView: BottomNavigationView = binding.navView
 
@@ -54,14 +54,14 @@ class MainScreen : AppCompatActivity() {
         val api = retrofit.create(MovieApi::class.java)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        CoroutineScope(Dispatchers.IO).launch {
-            val movielist = api.getPageOfMovies(1)
-            runOnUiThread {
-                binding.apply {
-                    adapter.submitList(movielist.docs)
-                }
-            }
-        }
+//        CoroutineScope(Dispatchers.IO).launch {
+//            val movielist = api.getPageOfMovies(1)
+//            runOnUiThread {
+//                binding.apply {
+//                    adapter.submitList(movielist.docs)
+//                }
+//            }
+//        }
 
     }
 }

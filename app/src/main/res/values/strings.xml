@@ -6,4 +6,43 @@
     <string name="title_favourites">Избранное</string>
     <string name="label_blank">Название фильма</string>
     <string name="year_blank">1990</string>
+    
+    <string name="sel_genre_label">Жанры</string>
+    <string name="sel_year_label">Годы</string>
+    <string name="sel_newmovies">Новинки</string>
+    <string name="sel_popmovies">Популярные</string>
+    <string name="sel_genre_anime">Аниме</string>
+    <string name="sel_genre_bio">Биография</string>
+    <string name="sel_genre_action">Боевик</string>
+    <string name="sel_genre_western">Вестерн</string>
+    <string name="sel_genre_military">Военный</string>
+    <string name="sel_genre_detective">Детектив</string>
+    <string name="sel_genre_kids">Детский</string>
+    <string name="sel_genre_adult"> Для взрослых</string>
+    <string name="sel_genre_doc">Документальный</string>
+    <string name="sel_genre_drama">Драма</string>
+    <string name="sel_genre_game">Игра</string>
+    <string name="sel_genre_history">История</string>
+    <string name="sel_genre_comedy">Комедия</string>
+    <string name="sel_genre_concert">Концерт</string>
+    <string name="sel_genre_short">Короткометражка</string>
+    <string name="sel_genre_crime">Криминал</string>
+    <string name="sel_genre_meldrama">Мелодрама</string>
+    <string name="sel_genre_music">Музыка</string>
+    <string name="sel_genre_cartoon">Мультфильм</string>
+    <string name="sel_genre_musical">Мьюзикл</string>
+    <string name="sel_genre_news">Новости</string>
+    <string name="sel_genre_adventure">Приключения</string>
+    <string name="sel_genre_realTV">Реальное ТВ</string>
+    <string name="sel_genre_family">Семейный</string>
+    <string name="sel_genre_sport">Спорт</string>
+    <string name="sel_genre_talkshow">Ток-шоу</string>
+    <string name="sel_genre_thriller">Триллер</string>
+    <string name="sel_genre_horror">Ужасы</string>
+    <string name="sel_genre_scifi">Фантастика</string>
+    <string name="sel_genre_noir">Нуар</string>
+    <string name="sel_genre_fantasy">Фэнтези</string>
+    <string name="sel_genre_ceremony">Церемония</string>
+
+    <string name="sel_year_custom">Свой вариант</string>
 </resources>
