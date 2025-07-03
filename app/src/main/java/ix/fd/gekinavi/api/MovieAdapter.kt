@@ -9,23 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import ix.fd.gekinavi.databinding.MovieStickerBinding
 import ix.fd.gekinavi.R
 
-class MovieAdapter: ListAdapter<Movie, MovieAdapter.Holder>(MovieAdapter.Comparator()) {
-    override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): Holder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_sticker, parent, false)
-        return Holder(view)
-    }
-
-    override fun onBindViewHolder(holder: Holder,position: Int) {
-        holder.bind(getItem(position))
-    }
-
+class MovieAdapter: ListAdapter<Movie, MovieAdapter.Holder>(Comparator()) {
     class Holder(view: View): RecyclerView.ViewHolder(view){
         private val binding = MovieStickerBinding.bind(view)
 
-        fun bind(movie: Movie): Nothing =with(binding){
+        fun bind(movie: Movie) =with(binding){
             stickerLabel.text = movie.name
             stickerYear.text = movie.year.toString()
-            TODO("stickerImage = movie.poster[0]")
         }
 
     }
@@ -39,4 +29,14 @@ class MovieAdapter: ListAdapter<Movie, MovieAdapter.Holder>(MovieAdapter.Compara
             return oldItem.id == newItem.id
         }
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): Holder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_sticker, parent, false)
+        return Holder(view)
+    }
+
+    override fun onBindViewHolder(holder: Holder,position: Int) {
+        holder.bind(getItem(position))
+    }
+
 }

@@ -35,11 +35,10 @@ class MainScreen : AppCompatActivity() {
 
         val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
-
+        adapter = MovieAdapter()
         var movieCards = findViewById<RecyclerView>(R.id.movie_cards)
         movieCards.layoutManager = GridLayoutManager(this, 2)
         movieCards.adapter = adapter
-        adapter.submitList()
 
         val navView: BottomNavigationView = binding.navView
 
@@ -51,15 +50,15 @@ class MainScreen : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_selection, R.id.navigation_favourites
             )
         )
-        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4").addConverterFactory(GsonConverterFactory.create()).build()
+        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
         val api = retrofit.create(MovieApi::class.java)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         CoroutineScope(Dispatchers.IO).launch {
-            val list = api.getPageOfMovies(1)
+            val movielist = api.getPageOfMovies(1)
             runOnUiThread {
                 binding.apply {
-
+                    adapter.submitList(movielist.docs)
                 }
             }
         }
