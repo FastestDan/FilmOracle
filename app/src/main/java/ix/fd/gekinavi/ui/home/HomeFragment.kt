@@ -41,26 +41,25 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val interceptor = HttpLoggingInterceptor()
-//        interceptor.level = HttpLoggingInterceptor.Level.BODY
-//
-//        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-//        binding.movieCards.layoutManager = GridLayoutManager(this.context, 2)
-//        adapter = MovieAdapter()
-//        binding.movieCards.adapter = adapter
+        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
+
+        _binding?.movieCards?.layoutManager = GridLayoutManager(this.context, 2)
+        adapter = MovieAdapter()
+        _binding?.movieCards?.adapter = adapter
 //
-//        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
-//        val api = retrofit.create(MovieApi::class.java)
+        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
+        val api = retrofit.create(MovieApi::class.java)
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 //        }
-
+        
 //        CoroutineScope(Dispatchers.IO).launch {
 //            val movielist = api.getPageOfMovies(1)
-//            binding.apply { adapter.submitList(movielist.movies) }
-//            print(movielist.movies[0])
+//            adapter.submitList(movielist.docs)
 //        }
         return root
     }

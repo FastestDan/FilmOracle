@@ -6,7 +6,8 @@
     <string name="title_favourites">Избранное</string>
     <string name="label_blank">Название фильма</string>
     <string name="year_blank">1990</string>
-    
+
+
     <string name="sel_genre_label">Жанры</string>
     <string name="sel_year_label">Годы</string>
     <string name="sel_newmovies">Новинки</string>

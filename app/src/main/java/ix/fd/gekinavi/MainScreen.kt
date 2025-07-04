@@ -23,6 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainScreen : AppCompatActivity() {
     private lateinit var adapter: MovieAdapter
     private lateinit var binding: ActivityMainScreenBinding
+    private var pagenum = 5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,13 +56,12 @@ class MainScreen : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         CoroutineScope(Dispatchers.IO).launch {
-            val movielist = api.getPageOfMovies(1)
+            val movielist = api.getPageOfMovies(pagenum)
             runOnUiThread {
                 binding.apply {
                     adapter.submitList(movielist.docs)
                 }
             }
         }
-
     }
 }

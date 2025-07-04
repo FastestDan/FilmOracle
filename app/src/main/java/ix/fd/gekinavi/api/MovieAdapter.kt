@@ -21,7 +21,7 @@ class MovieAdapter: ListAdapter<Movie, MovieAdapter.Holder>(Comparator()) {
             stickerLabel.text = movie.name
             stickerYear.text = movie.year.toString()
 //            Glide.with().load(movie.poster.url).into(stickerImage)
-            Picasso.get().load(movie.poster.url).into(stickerImage)
+            Picasso.get().load(movie.poster.previewUrl).into(stickerImage)
         }
 
     }
