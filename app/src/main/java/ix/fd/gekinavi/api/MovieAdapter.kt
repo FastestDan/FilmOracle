@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
 import ix.fd.gekinavi.databinding.MovieStickerBinding
 import ix.fd.gekinavi.R
 
@@ -13,9 +15,13 @@ class MovieAdapter: ListAdapter<Movie, MovieAdapter.Holder>(Comparator()) {
     class Holder(view: View): RecyclerView.ViewHolder(view){
         private val binding = MovieStickerBinding.bind(view)
 
+
+
         fun bind(movie: Movie) =with(binding){
             stickerLabel.text = movie.name
             stickerYear.text = movie.year.toString()
+//            Glide.with().load(movie.poster.url).into(stickerImage)
+            Picasso.get().load(movie.poster.url).into(stickerImage)
         }
 
     }

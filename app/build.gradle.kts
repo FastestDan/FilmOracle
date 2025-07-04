@@ -45,7 +45,8 @@ dependencies {
     implementation(libs.logging.interceptor)
     implementation(libs.okhttp)
 
-//    implementation()
+    implementation(libs.picasso)
+    implementation(libs.glide)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
