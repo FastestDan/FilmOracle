@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ix.fd.gekinavi.R
@@ -16,6 +17,7 @@ import ix.fd.gekinavi.databinding.FragmentHomeBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -24,6 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
+    val pagenum = 5
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -50,17 +53,15 @@ class HomeFragment : Fragment() {
         adapter = MovieAdapter()
         _binding?.movieCards?.adapter = adapter
 //
-        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
+        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/")
+            .client(client).addConverterFactory(GsonConverterFactory.create()).build()
         val api = retrofit.create(MovieApi::class.java)
-//        val textView: TextView = binding.textHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-        
-//        CoroutineScope(Dispatchers.IO).launch {
-//            val movielist = api.getPageOfMovies(1)
-//            adapter.submitList(movielist.docs)
-//        }
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            val movielist = api.getPageOfMovies(pagenum)
+            withContext(Dispatchers.Main) { adapter.submitList(movielist.docs) }
+        }
+
         return root
     }
 

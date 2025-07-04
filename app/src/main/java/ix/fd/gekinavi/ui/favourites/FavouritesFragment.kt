@@ -28,10 +28,12 @@ class FavouritesFragment : Fragment() {
         _binding = FragmentFavouritesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        favouritesViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.textNotifications
+//        favouritesViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+
+//        for (item in _binding?.genre_buttons)
         return root
     }
 

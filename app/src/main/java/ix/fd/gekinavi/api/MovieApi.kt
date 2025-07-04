@@ -16,7 +16,7 @@ interface MovieApi{
 
     @Headers("X-API-KEY: DYFDAKB-MSZMZ3G-MK3VFRK-57R5S3R")
     @GET("movie/{id}")
-    suspend fun getMovieById(@Path("id") id: Int): Movie
+    suspend fun getMovieById(@Path("id") id: Int?): Movie
 
     @Headers("X-API-KEY: DYFDAKB-MSZMZ3G-MK3VFRK-57R5S3R")
     @GET("movie")

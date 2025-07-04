@@ -1,5 +1,6 @@
 package ix.fd.gekinavi
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ix.fd.gekinavi.api.MovieAdapter
 import ix.fd.gekinavi.api.MovieApi
 import ix.fd.gekinavi.databinding.ActivityMainScreenBinding
+import ix.fd.gekinavi.ui.movieinfo.MovieInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -31,15 +33,15 @@ class MainScreen : AppCompatActivity() {
         binding = ActivityMainScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val interceptor = HttpLoggingInterceptor()
-        interceptor.level = HttpLoggingInterceptor.Level.BODY
-
-        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
-
-        adapter = MovieAdapter()
-        var movieCards = findViewById<RecyclerView>(R.id.movie_cards)
-        movieCards.layoutManager = GridLayoutManager(this, 2)
-        movieCards.adapter = adapter
+//        val interceptor = HttpLoggingInterceptor()
+//        interceptor.level = HttpLoggingInterceptor.Level.BODY
+//
+//        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
+//
+//        adapter = MovieAdapter()
+//        var movieCards = findViewById<RecyclerView>(R.id.movie_cards)
+//        movieCards.layoutManager = GridLayoutManager(this, 2)
+//        movieCards.adapter = adapter
 
         val navView: BottomNavigationView = binding.navView
 
@@ -51,17 +53,18 @@ class MainScreen : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_selection, R.id.navigation_favourites
             )
         )
-        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
-        val api = retrofit.create(MovieApi::class.java)
+//        val retrofit = Retrofit.Builder().baseUrl("https://api.kinopoisk.dev/v1.4/")
+//            .client(client).addConverterFactory(GsonConverterFactory.create()).build()
+//        val api = retrofit.create(MovieApi::class.java)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        CoroutineScope(Dispatchers.IO).launch {
-            val movielist = api.getPageOfMovies(pagenum)
-            runOnUiThread {
-                binding.apply {
-                    adapter.submitList(movielist.docs)
-                }
-            }
-        }
+//        CoroutineScope(Dispatchers.IO).launch {
+//            val movielist = api.getPageOfMovies(pagenum)
+//            runOnUiThread {
+//                binding.apply {
+//                    adapter.submitList(movielist.docs)
+//                }
+//            }
+//        }
     }
 }
